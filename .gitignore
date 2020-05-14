@@ -130,3 +130,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# training data, models and others
+data/
+models/
+shared_models/
+tools/
+translations/
+venvs

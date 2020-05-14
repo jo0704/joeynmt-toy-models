@@ -16,8 +16,8 @@ trg=en
 # cloned from https://github.com/bricksdont/moses-scripts
 MOSES=$base/tools/moses-scripts/scripts
 
-num_threads=4
-device=5
+num_threads=12
+device=0
 
 # measure time
 
@@ -59,4 +59,3 @@ done
 
 echo "time taken:"
 echo "$SECONDS seconds"
-
