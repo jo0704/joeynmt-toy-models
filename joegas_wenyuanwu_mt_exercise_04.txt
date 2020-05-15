@@ -1,7 +1,7 @@
 Olat usernames: joegas and wenyuanwu
 
-joeynmt-toy-models:
-https://github.com/jo0704/joeynmt-toy-models
+joeynmt-toy-models[on branch factor_test]:
+https://github.com/jo0704/joeynmt-toy-models/tree/factor_test
 
-joeynmt:
-https://github.com/wenyuan-wu/joeynmt
+joeynmt[on branch factors_test_b]:
+https://github.com/wenyuan-wu/joeynmt/tree/factors_test_b
