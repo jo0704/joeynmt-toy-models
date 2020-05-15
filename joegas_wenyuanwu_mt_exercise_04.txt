@@ -1,0 +1,7 @@
+Olat usernames: joegas and wenyuanwu
+
+joeynmt-toy-models:
+https://github.com/jo0704/joeynmt-toy-models
+
+joeynmt:
+https://github.com/wenyuan-wu/joeynmt
