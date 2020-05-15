@@ -56,4 +56,4 @@ Evaluate a trained model with
 
 We understand the basic idea behind the "add" and "concatenate" methods and the requirements they need (the source embedding has to be equal to the target embedding). However, we were not able to imply the "add" method successfully, even for the "concatenate" method, we are not sure if the implementation in our code is the right way to achieve that (which is most likely not).
 Overall, we spent a lot of time to understand the code and to study documentation about pytorch on how to implement these two methods.
-For this assignment, we spent more than 10 hours (not to mention the errors that had to be solved in train.sh for Joëlle). 
+For this assignment, we spent more than 10 hours (not to mention the errors that had to be solved in train.sh and the uncountable hours taking pytorch tutorials). 
