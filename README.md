@@ -53,6 +53,7 @@ Evaluate a trained model with
 | Baseline | 8.9 |
 | concatenated | 3.0 |
 | summed | None | 
+
 We didn't successfully to imply the adding method, even for the concatenating method, we are not sure if the 
 implementation in our code is the right way to achieve that (which is most likely not). 
 Overall this is a difficult assignment.
