@@ -1,18 +1,18 @@
-name: "de_en_bpe"
+name: "de_en_bpe_2000"
 
 data:
     src: "de"
     trg: "en"
-    train: "data/train.de-en"
-    dev:   "data/dev.de-en"
-    test:  "data/test.de-en"
+    train: "data/train.bpe.2000"
+    dev:   "data/dev.bpe.2000"
+    test:  "date/test.bpe.2000"
     level: "bpe"
     lowercase: False
     max_sent_length: 100
-    # a file with a vocabulary built before starting the training:
+    # files with a vocabulary built before starting the training:
     # Usually the vocabulary for BPE should be between 5K-30K
-    src_vocab: 2000
-    trg_vocab: 2000
+    src_vocab: "shared_models/vocab.2000.txt"
+    trg_vocab: "shared_models/vocab.2000.txt"
 
 testing:
     beam_size: 5
