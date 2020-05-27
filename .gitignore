@@ -130,3 +130,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# specific folders for project
+data/
+tools/
+venvs/
