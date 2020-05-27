@@ -16,7 +16,8 @@ device=0
 
 SECONDS=0
 
-CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt train $configs/de_en_without_bpe.yaml
+# train word-level model
+# CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt train $configs/de_en_word.yaml
 
 # train bpe setup:
 

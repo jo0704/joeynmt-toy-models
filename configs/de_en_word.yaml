@@ -1,21 +1,20 @@
-name: "low_resource_example"
+name: "de_en_word"
 
 data:
     src: "de"
     trg: "en"
-    train: "data"
-    dev:   "?"
-    test:  "?"
-    level: "?"
+    train: "data/train.de-en"
+    dev:   "data/dev.de-en"
+    test:  "data/test.de-en"
+    level: "word"
     lowercase: False
     max_sent_length: 100
     # use a vocabulary limit:
-    src_voc_limit: ?
-    trg_voc_limit: ?
-
+    src_voc_limit: 2000
+    trg_voc_limit: 2000
 
 testing:
-    beam_size: ?
+    beam_size: 5
     alpha: 1.0
 
 training:
@@ -35,7 +34,7 @@ training:
     validation_freq: 500
     logging_freq: 100
     eval_metric: "bleu"
-    model_dir: "?"
+    model_dir: "models/de_en_word"
     overwrite: False
     shuffle: True
     use_cuda: True
