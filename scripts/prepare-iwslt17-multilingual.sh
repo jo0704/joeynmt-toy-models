@@ -6,10 +6,10 @@
 
 LANGS=(
     "de"
-    "it"
-    "nl"
-    "ro"
     "en"
+#    "it"
+#    "nl"
+#    "ro"
 )
 
 ROOT=$(dirname "$0")/..
