@@ -1,23 +1,21 @@
-name: "low_resource_example"
+name: "de_en_bpe"
 
 data:
-    src: "?"
-    trg: "?"
-    train: "?"
-    dev:   "?"
-    test:  "?"
-    level: "?"
+    src: "de"
+    trg: "en"
+    train: "data/train.de-en"
+    dev:   "data/dev.de-en"
+    test:  "data/test.de-en"
+    level: "bpe"
     lowercase: False
     max_sent_length: 100
-    # either use a vocabulary limit:
-    src_voc_limit: ?
-    trg_voc_limit: ?
-    # or (= not both!) a file with a vocabulary built before starting the training:
-    src_vocab: "?"
-    trg_vocab: "?"
+    # a file with a vocabulary built before starting the training:
+    # Usually the vocabulary for BPE should be between 5K-30K
+    src_vocab: 2000
+    trg_vocab: 2000
 
 testing:
-    beam_size: ?
+    beam_size: 5
     alpha: 1.0
 
 training:
@@ -37,7 +35,7 @@ training:
     validation_freq: 500
     logging_freq: 100
     eval_metric: "bleu"
-    model_dir: "?"
+    model_dir: "models/de_en_bpe_2000"
     overwrite: False
     shuffle: True
     use_cuda: False
