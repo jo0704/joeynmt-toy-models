@@ -1,5 +1,4 @@
 #! /bin/bash
-# TODO: need to adapt to new project
 
 scripts=`dirname "$0"`
 base=$scripts/..
@@ -24,7 +23,24 @@ device=0
 
 SECONDS=0
 
-for model_name in rnn_wmt16_factors_concatenate_deen; do
+echo "###############################################################################"
+echo "model_name word-level"
+
+mkdir -p $translations/word-level
+
+CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt translate $configs/word-level.yaml < $data/test.de-en.tokenized.$src > $translations/word-level/test.word-level.tokenized.$trg
+
+# undo tokenization
+
+cat $translations/word-level/test.word-level.tokenized.$trg | $MOSES/tokenizer/detokenizer.perl -l $trg > $translations/word-level/test.word-level.$trg
+
+# compute case-sensitive BLEU on detokenized data
+
+cat $translations/word-level/test.word-level.$trg | sacrebleu $data/test.de-en.$trg
+
+# translate and evaluate BPE models
+
+for model_name in bpe.2000 bpe.5000 bpe.10000; do
 
     echo "###############################################################################"
     echo "model_name $model_name"
@@ -33,20 +49,11 @@ for model_name in rnn_wmt16_factors_concatenate_deen; do
 
     mkdir -p $translations_sub
 
-    # translation with factors: lines in the input file have to be:
-    # source tokens ||| factor tokens
-
-    CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt translate $configs/$model_name.yaml < $data/test.combined > $translations_sub/test.bpe.$model_name.$trg
-
-    # CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt translate $configs/$model_name.yaml < $data/test.bpe.$src > $translations_sub/test.bpe.$model_name.$trg
+    CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt translate $configs/$model_name.yaml < $data/test.$model_name.$trg > $translations_sub/test.$model_name.$trg
 
     # undo BPE (this does not do anything: https://github.com/joeynmt/joeynmt/issues/91)
 
-    cat $translations_sub/test.bpe.$model_name.$trg | sed 's/\@\@ //g' > $translations_sub/test.truecased.$model_name.$trg
-
-    # undo truecasing
-
-    cat $translations_sub/test.truecased.$model_name.$trg | $MOSES/recaser/detruecase.perl > $translations_sub/test.tokenized.$model_name.$trg
+    cat $translations_sub/test.$model_name.$trg | sed 's/\@\@ //g' > $translations_sub/test.tokenized.$model_name.$trg
 
     # undo tokenization
 
@@ -54,7 +61,7 @@ for model_name in rnn_wmt16_factors_concatenate_deen; do
 
     # compute case-sensitive BLEU on detokenized data
 
-    cat $translations_sub/test.$model_name.$trg | sacrebleu $data/test.$trg
+    cat $translations_sub/test.$model_name.$trg | sacrebleu $data/test.de-en.$trg
 
 done
 

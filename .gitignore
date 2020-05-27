@@ -137,4 +137,5 @@ tools/
 venvs/
 models/
 shared_models/
+translations/
 models.tar.gz

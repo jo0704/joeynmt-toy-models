@@ -1,23 +1,20 @@
-name: "low_resource_example"
+name: "word-level"
 
 data:
-    src: "?"
-    trg: "?"
-    train: "?"
-    dev:   "?"
-    test:  "?"
-    level: "?"
+    src: "de"
+    trg: "en"
+    train: "data/train.de-en.tokenized"
+    dev:   "data/dev.de-en.tokenized"
+    test:  "data/test.de-en.tokenized"
+    level: "word"
     lowercase: False
     max_sent_length: 100
-    # either use a vocabulary limit:
-    src_voc_limit: ?
-    trg_voc_limit: ?
-    # or (= not both!) a file with a vocabulary built before starting the training:
-    src_vocab: "?"
-    trg_vocab: "?"
+    # use a vocabulary limit:
+    src_voc_limit: 2000
+    trg_voc_limit: 2000
 
 testing:
-    beam_size: ?
+    beam_size: 5
     alpha: 1.0
 
 training:
@@ -33,14 +30,14 @@ training:
     weight_decay: 0.0
     decrease_factor: 0.7
     early_stopping_metric: "ppl"
-    epochs: 2
+    epochs: 8
     validation_freq: 500
     logging_freq: 100
     eval_metric: "bleu"
-    model_dir: "?"
+    model_dir: "models/word-level"
     overwrite: False
     shuffle: True
-    use_cuda: False
+    use_cuda: True
     max_output_length: 100
     print_valid_sents: [0, 1, 2, 3, 4]
     label_smoothing: 0.1

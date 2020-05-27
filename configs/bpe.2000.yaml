@@ -1,17 +1,18 @@
-name: "de_en_word"
+name: "bpe.2000"
 
 data:
     src: "de"
     trg: "en"
-    train: "data/train.de-en"
-    dev:   "data/dev.de-en"
-    test:  "data/test.de-en"
-    level: "word"
+    train: "data/train.bpe.2000"
+    dev:   "data/dev.bpe.2000"
+    test:  "date/test.bpe.2000"
+    level: "bpe"
     lowercase: False
     max_sent_length: 100
-    # use a vocabulary limit:
-    src_voc_limit: 2000
-    trg_voc_limit: 2000
+    # files with a vocabulary built before starting the training:
+    # Usually the vocabulary for BPE should be between 5K-30K
+    src_vocab: "shared_models/vocab.2000.txt"
+    trg_vocab: "shared_models/vocab.2000.txt"
 
 testing:
     beam_size: 5
@@ -30,11 +31,11 @@ training:
     weight_decay: 0.0
     decrease_factor: 0.7
     early_stopping_metric: "ppl"
-    epochs: 2
+    epochs: 8
     validation_freq: 500
     logging_freq: 100
     eval_metric: "bleu"
-    model_dir: "models/de_en_word"
+    model_dir: "models/bpe.2000"
     overwrite: False
     shuffle: True
     use_cuda: True
