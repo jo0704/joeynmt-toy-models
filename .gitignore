@@ -136,3 +136,5 @@ data/
 tools/
 venvs/
 models/
+shared_models/
+models.tar.gz
