@@ -16,19 +16,14 @@ device=0
 SECONDS=0
 
 # train word-level model
+
 CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt train $configs/word-level.yaml
 
 # train bpe models:
 
-for model_name in bpe.2000 bpe.5000 bpe.10000; do
-  echo "###############################################################################"
-  echo "model_name $model_name"
-
-  CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt train $configs/$model_name.yaml
-done
-
-# archive models folder to upload
-tar -zcvf models.tar.gz models/
+CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt train $configs/bpe.2000.yaml
+CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt train $configs/bpe.5000.yaml
+CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt train $configs/bpe.10000.yaml
 
 echo "time taken:"
 echo "$SECONDS seconds"

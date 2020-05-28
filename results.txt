@@ -1,0 +1,14 @@
+###############################################################################
+model_name word-level
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 15.8 41.8/20.6/11.3/6.4 (BP = 1.000 ratio = 1.246 hyp_len = 38814 ref_len = 31162)
+###############################################################################
+model_name bpe.2000
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 16.9 42.5/21.9/12.3/7.1 (BP = 1.000 ratio = 1.187 hyp_len = 36995 ref_len = 31162)
+###############################################################################
+model_name bpe.5000
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 9.3 28.3/12.5/6.3/3.3 (BP = 1.000 ratio = 1.531 hyp_len = 47713 ref_len = 31162)
+###############################################################################
+model_name bpe.10000
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 5.8 21.8/8.2/3.6/1.7 (BP = 1.000 ratio = 1.807 hyp_len = 56314 ref_len = 31162)
+time taken:
+117 seconds

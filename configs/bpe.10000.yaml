@@ -5,7 +5,7 @@ data:
     trg: "en"
     train: "data/train.bpe.10000"
     dev:   "data/dev.bpe.10000"
-    test:  "date/test.bpe.10000"
+    test:  "data/test.bpe.10000"
     level: "bpe"
     lowercase: False
     max_sent_length: 100
