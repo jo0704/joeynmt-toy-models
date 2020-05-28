@@ -2,8 +2,8 @@
 
 **Due date: Friday, May 29 2020, 14:00**
 
-This repo contains scripts and translation results for 5th exercise of machine translation course, 
-as well as feedback this assignment.
+This repository contains scripts and translation results for the 5th exercise of the machine translation course, 
+as well as feedback for this assignment.
 
 # Requirements
 
@@ -68,7 +68,7 @@ Regarding the training time with a GPU-enabled machine, we increased the number 
 
 ## Results: Task 1
 
-We get the following results on BLEU scores:
+We get the following results for BLEU scores:
 
 | use BPE | vocabulary size | BLEU |
 | ---: | ---: | ---: |
@@ -77,10 +77,16 @@ We get the following results on BLEU scores:
 | yes | 5000 | 9.3 |
 | yes | 10000 | 5.8 |
 
-TODO : explain results
+This table shows two main interesting discoveries:
+First, if we compare the word model to the BPE model, 
+we get a slightly higher BLEU score with subwords if we consider the vocabulary size of 2000.
+Thus, low-resource set up can benefit from BPE, but in a constrained way: 
+the vocabulary size plays a important role here.
+Second, when we increase the vocabulary size with a BPE model, the performance decreases.
+Possible reasons/interpretations for this:
+As the vocabulary size influences the number of operations that have to be performed at each decoding step,
+this means that the computational complexity increases dramatically if we increase the vocabulary size.
 
-As we can see from the table, low-resource set up can benefit from BPE, but in a constrained way: the vocabulary size
-plays a important role here. Larger vocabulary size doesn't contribute to performance...
 
 TODO : How do translations differ if we look at them manually?
 
@@ -102,9 +108,13 @@ In order to investigate how beam size influences BLEU score, we trained our best
 | 9 | 18.0 |
 | 10 | 18.1 |
 
-We plotted a graph to show the results we got. This graph can be found as an image under:
+We plotted a graph to show the results we got 
 
 ![image](./bleu_beam.png)
+
+This graph can be found as an image under:
+
+    bleu_beam.png
 
 In order to produce the graph, we created a python script:
 
