@@ -2,6 +2,6 @@ Submission of exercise 5:
 
 olat usernames: joegas and wenyuanwu 
 
-Link to github repository:
+Link to github repository (on branch apply_bpe):
 
-https://github.com/jo0704/joeynmt-toy-models
+https://github.com/jo0704/joeynmt-toy-models/tree/apply_bpe
