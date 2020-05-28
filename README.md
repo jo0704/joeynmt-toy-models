@@ -94,13 +94,18 @@ coherence of the sentence even more.
 Adding to that, there are other redundant repetitions of words/expressions.
 Just looking of some fragments of text, the less the vocabulary size, the more the sentences would make sense. However, the coherence on document-level is almost non-existent.
 
-Let's discuss the first sentence to have a clearer idea of how the translation differ.
+Let's discuss the first sentence to have a clearer idea of how the translations differ.
+
 Source in German: "Vor einigen Jahren, hier bei TED, stellte Peter Skillman einen Design-Wettbewerb namens "Die Marshmallow-Herausforderung" vor."
+
 Reference translation: "Several years ago here at TED, Peter Skillman  introduced a design challenge  called the marshmallow challenge."
+
 BPE-vocabulary size 2000: "Several officer, at TED, Peter Skillman introduced a design of the marshmallow." 
 Here, the general meaning of the sentence is contained, even though some grammatical mistakes appear, and the first part of the sentence doesn't mean much.
+
 BPE-vocabulary size 5000: "Several: Second, Several, last of the time, you know, Peter Skillman introduced a design of the marshmallow."
 Here, the sentence completely looses its fluency and becomes redundant. If we only consider the second part of the sentence, we could say that the general meaning is maintained. 
+
 BPE-vocabulary size 10000: "You know, Several at TED, Peter Skillman, and Peter Skillman, who is the marshmallow."
 Here, the sentence is not fluent either, but what's worse is the redundant repetition of the person's name and the fact that the meaning to which "marshmallow" is assigned has changed (from designing the marshmallow to being the marshmallow).
 
