@@ -104,7 +104,7 @@ In order to investigate how beam size influences BLEU score, we trained our best
 
 We plotted a graph to show the results we got. This graph can be found as an image under:
 
-    bleu_beam.png
+![image](./bleu_beam.png)
 
 In order to produce the graph, we created a python script:
 
