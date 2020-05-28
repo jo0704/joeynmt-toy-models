@@ -55,7 +55,7 @@ Evaluate trained models for task 2 with
 
 # Feedback
 
-All the changes were made on the branch [apply_bpe](https://github.com/jo0704/joeynmt-toy-models/tree/apply_bpe) on our github repository.
+All the changes were made on the branch [ex5](https://github.com/jo0704/joeynmt-toy-models/tree/ex5) on our github repository.
 
 ## Data
 
