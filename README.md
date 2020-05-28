@@ -17,7 +17,7 @@ Clone this repository in the desired place and check out the correct branch:
 
     git clone https://github.com/bricksdont/joeynmt-toy-models
     cd joeynmt-toy-models
-    checkout ex4
+    checkout ex5
 
 Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
 
@@ -46,3 +46,42 @@ The training process can be interrupted at any time, and the best checkpoint wil
 Evaluate a trained model with
 
     ./scripts/evaluate.sh
+
+# Feedback
+
+### Data
+
+The language pair and translation direction that we chose is de-en.
+
+### Training
+
+BPE: vocabulary size was first initialized with 2000 subwords. Then, we trained our BPE model with 5000 and 1000 words.
+To make this more interesting, we increased the number of epochs from 2 to TODO.
+
+### results: BLEU
+
+TODO: We get the following results on BLEU scores:
+
+| use BPE | vocabulary size | BLEU |
+| no | 2000 |  |
+| yes | 2000 |  |
+| yes |  |  |
+
+
+TODO : How do translations differ if we look at them manually?
+
+### results: beam size VS BLEU
+
+In order to investigate how beam size influences BLEU score, we trained our best model:
+
+
+and translated the test set 10 times, each time varyingn the beam size. 
+We plotted a graph to show the results we got. This graph can be found as an image under:
+
+    bleu_beam.png
+
+In order to produce the graph, we created a python script:
+
+    graph.py
+
+TODO : comments about the impact of beam size on BLEU and personal take on which beam size to choose in the future
