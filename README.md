@@ -110,12 +110,20 @@ In order to produce the graph, we created a python script:
 
     graph.py
 
-TODO : comments about the impact of beam size on BLEU and personal take on which beam size to choose in the future
+When testing with different beam sizes, we can first observe that the more we approach the beam size of 10, the higher the BLEU score.
+With very low beam sizes like 1 or 2, the BLEU score increases faster than with higher beam sizes like 9 or 10. 
+Thus, increasing beam size when it's very low has certainly the greatest impact on BLEU.
+The last beam size we tested was 10, and we can see that the impact on BLEU between size 9 and 10 is very minimal. 
+This tells us that increasing beam size after that last test will probably not increase BLEU that much, or even more minimally.
+When we first trained, we started with beam size of 5. In the future, we would choose a higher size, like 9 or 10, 
+since our observations showed that we can improve translation quality.
+
 
 ## Problems
+
 If 2-3 models were training one after another without stopping in a single bash script, 
 after first model was trained,
 there would be an error indicating GPU memory was full and training process could not be proceeded, 
 actually we think it might be a bug from pytorch because pytorch didn't reallocate GPU memory to new training sessions 
 after previous sessions were already finished. 
-The solution is simple but annoying: reboot the computer to empty the GPU memory will solve the problem in no time.
+The solution is simple but annoying: rebooting the computer to empty the GPU memory will solve the problem in no time.
