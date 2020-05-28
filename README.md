@@ -49,6 +49,8 @@ Evaluate a trained model with
 
 # Feedback
 
+All the changes were made on the branch apply_bpe on our github repository.
+
 ### Data
 
 The language pair and translation direction that we chose is de-en.
