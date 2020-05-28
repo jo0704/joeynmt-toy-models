@@ -65,9 +65,11 @@ To make this more interesting, we increased the number of epochs from 2 to TODO.
 TODO: We get the following results on BLEU scores:
 
 | use BPE | vocabulary size | BLEU |
-| no | 2000 |  |
-| yes | 2000 |  |
-| yes |  |  |
+| ---: | ---: | ---: |
+| no | 2000 | 15.8 |
+| yes | 2000 | 16.9 |
+| yes | 5000 | 9.3 |
+| yes | 10000 | 5.8 |
 
 
 TODO : How do translations differ if we look at them manually?
