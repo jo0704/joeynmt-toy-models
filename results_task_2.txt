@@ -1,0 +1,62 @@
+###############################################################################
+model_name bpe.2000.beam.1
+2020-05-28 15:09:03,081 Hello! This is Joey-NMT.
+Detokenizer Version $Revision: 4134 $
+Language: en
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 12.1 35.0/16.3/8.4/4.5 (BP = 1.000 ratio = 1.390 hyp_len = 43310 ref_len = 31162)
+###############################################################################
+model_name bpe.2000.beam.2
+2020-05-28 15:09:25,408 Hello! This is Joey-NMT.
+Detokenizer Version $Revision: 4134 $
+Language: en
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 14.7 39.1/19.3/10.5/6.0 (BP = 1.000 ratio = 1.281 hyp_len = 39904 ref_len = 31162)
+###############################################################################
+model_name bpe.2000.beam.3
+2020-05-28 15:09:47,141 Hello! This is Joey-NMT.
+Detokenizer Version $Revision: 4134 $
+Language: en
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 16.0 41.0/20.8/11.6/6.6 (BP = 1.000 ratio = 1.228 hyp_len = 38271 ref_len = 31162)
+###############################################################################
+model_name bpe.2000.beam.4
+2020-05-28 15:10:11,887 Hello! This is Joey-NMT.
+Detokenizer Version $Revision: 4134 $
+Language: en
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 16.7 42.2/21.6/12.1/7.0 (BP = 1.000 ratio = 1.198 hyp_len = 37335 ref_len = 31162)
+###############################################################################
+model_name bpe.2000.beam.5
+2020-05-28 15:10:40,743 Hello! This is Joey-NMT.
+Detokenizer Version $Revision: 4134 $
+Language: en
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 16.9 42.5/21.9/12.3/7.1 (BP = 1.000 ratio = 1.187 hyp_len = 36995 ref_len = 31162)
+###############################################################################
+model_name bpe.2000.beam.6
+2020-05-28 15:11:13,675 Hello! This is Joey-NMT.
+Detokenizer Version $Revision: 4134 $
+Language: en
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 17.4 43.2/22.4/12.7/7.4 (BP = 1.000 ratio = 1.172 hyp_len = 36511 ref_len = 31162)
+###############################################################################
+model_name bpe.2000.beam.7
+2020-05-28 15:11:50,565 Hello! This is Joey-NMT.
+Detokenizer Version $Revision: 4134 $
+Language: en
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 17.4 43.4/22.4/12.7/7.4 (BP = 1.000 ratio = 1.161 hyp_len = 36167 ref_len = 31162)
+###############################################################################
+model_name bpe.2000.beam.8
+2020-05-28 15:12:32,135 Hello! This is Joey-NMT.
+Detokenizer Version $Revision: 4134 $
+Language: en
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 17.7 43.9/22.9/13.0/7.6 (BP = 1.000 ratio = 1.150 hyp_len = 35841 ref_len = 31162)
+###############################################################################
+model_name bpe.2000.beam.9
+2020-05-28 15:13:17,440 Hello! This is Joey-NMT.
+Detokenizer Version $Revision: 4134 $
+Language: en
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 18.0 44.3/23.1/13.2/7.7 (BP = 1.000 ratio = 1.138 hyp_len = 35476 ref_len = 31162)
+###############################################################################
+model_name bpe.2000.beam.10
+2020-05-28 15:14:07,309 Hello! This is Joey-NMT.
+Detokenizer Version $Revision: 4134 $
+Language: en
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 18.1 44.4/23.2/13.3/7.8 (BP = 1.000 ratio = 1.133 hyp_len = 35292 ref_len = 31162)
+time taken:
+358 seconds

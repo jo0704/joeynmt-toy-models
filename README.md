@@ -62,7 +62,7 @@ To make this more interesting, we increased the number of epochs from 2 to TODO.
 
 ### results: BLEU
 
-TODO: We get the following results on BLEU scores:
+We get the following results on BLEU scores:
 
 | use BPE | vocabulary size | BLEU |
 | ---: | ---: | ---: |
@@ -77,9 +77,23 @@ TODO : How do translations differ if we look at them manually?
 ### results: beam size VS BLEU
 
 In order to investigate how beam size influences BLEU score, we trained our best model:
-
+use BPE with vocaulary size of 2000
 
 and translated the test set 10 times, each time varyingn the beam size. 
+
+| Beam size | BLEU |
+| ---: | ---: |
+| 1 | 12.1 |
+| 2 | 14.7 |
+| 3 | 16.0 |
+| 4 | 16.7 |
+| 5 | 16.9 |
+| 6 | 17.4 |
+| 7 | 17.4 |
+| 8 | 17.7 |
+| 9 | 18.0 |
+| 10 | 18.1 |
+
 We plotted a graph to show the results we got. This graph can be found as an image under:
 
     bleu_beam.png
