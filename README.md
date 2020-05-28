@@ -19,7 +19,7 @@ Clone this repository in the desired place and check out the correct branch:
 
     git clone https://github.com/bricksdont/joeynmt-toy-models
     cd joeynmt-toy-models
-    checkout apply_bpe
+    checkout ex5
 
 Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
 
