@@ -102,9 +102,11 @@ Reference translation: "Several years ago here at TED, Peter Skillman  introduce
 
 BPE-vocabulary size 2000: "Several officer, at TED, Peter Skillman introduced a design of the marshmallow." 
 Here, the general meaning of the sentence is contained, even though some grammatical mistakes appear, and the first part of the sentence doesn't mean much.
+Also, some important content has not been translated at all (several years ago, challenge).
 
 BPE-vocabulary size 5000: "Several: Second, Several, last of the time, you know, Peter Skillman introduced a design of the marshmallow."
-Here, the sentence completely looses its fluency and becomes redundant. If we only consider the second part of the sentence, we could say that the general meaning is maintained. 
+Here, the sentence completely looses its fluency and becomes redundant. If we only consider the second part of the sentence, we could say that the general meaning is maintained.
+Comparing to the output of the same sentence with vocabulary size of 2000, there is even more content missing (several years ago, TED, challenge), and also additional content (second, last of the time) which negatively affects quality loss of the translation. 
 
 BPE-vocabulary size 10000: "You know, Several at TED, Peter Skillman, and Peter Skillman, who is the marshmallow."
 Here, the sentence is not fluent either, but what's worse is the redundant repetition of the person's name and the fact that the meaning to which "marshmallow" is assigned has changed (from designing the marshmallow to being the marshmallow).
